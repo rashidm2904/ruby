@@ -5,6 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Love Message for Aliza</title>
   <style>
+    /* Basic Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Background and font styling */
     body {
       display: flex;
       align-items: center;
@@ -16,6 +24,7 @@
       overflow: hidden;
     }
 
+    /* Heart Shape */
     .heart {
       position: relative;
       width: 300px;
@@ -50,10 +59,9 @@
     .container {
       position: absolute;
       text-align: center;
-      color: white;
-      font-size: 3em;
-      transform: rotate(0deg); /* Rotates text back to align normally */
       color: #fff5f5;
+      font-size: 2em;
+      transform: rotate(45deg); /* Rotates text back to align normally */
     }
 
     h1 {
@@ -79,6 +87,36 @@
       }
       50% {
         transform: scale(1.1) rotate(-45deg);
+      }
+    }
+
+    /* Responsive Design */
+    @media (max-width: 600px) {
+      .heart {
+        width: 200px;
+        height: 200px;
+      }
+
+      .heart::before,
+      .heart::after {
+        width: 200px;
+        height: 200px;
+      }
+
+      .heart::before {
+        top: -100px;
+      }
+
+      .heart::after {
+        left: 100px;
+      }
+
+      .container {
+        font-size: 1.5em;
+      }
+
+      h1 {
+        font-size: 2em;
       }
     }
   </style>
